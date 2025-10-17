@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Clean luxury palette: white, gold, red, black, green - no gradients */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 10%;
+    --primary: 45 93% 47%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 84% 60%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+    --accent: 142 71% 45%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 45 93% 47%;
+    --radius: 0.5rem;
+    --chart-1: 45 93% 47%;
+    --chart-2: 0 84% 60%;
+    --chart-3: 142 71% 45%;
+    --chart-4: 0 0% 10%;
+    --chart-5: 0 0% 100%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply text-foreground;
+    /* Added casino-themed background image with dark overlay */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+      url("/fca61238cb7cd26cea87c406e74d5a77.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Simple luxury card styles without gradients */
+.elegant-card {
+  background-color: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.elegant-card-premium {
+  background: hsl(var(--card));
+  border: 2px solid hsl(var(--primary));
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* Simple solid accent line */
+.portugal-accent-line {
+  background: hsl(var(--primary));
+  height: 3px;
+}
