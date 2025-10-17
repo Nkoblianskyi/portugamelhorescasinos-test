@@ -4,6 +4,7 @@ import { Playfair_Display, Inter } from "next/font/google"
 import "./globals.css"
 import { Footer } from "@/components/footer"
 import { CookieBanner } from "@/components/cookie-banner"
+import { CasinoModal } from "@/components/casino-modal"
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -33,6 +34,7 @@ export default function RootLayout({
           {children}
           <Footer />
           <CookieBanner />
+          <CasinoModal />
         </div>
       </body>
     </html>
