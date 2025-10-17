@@ -75,7 +75,7 @@ export function CasinoModal({ site: propSite, rank: propRank, isOpen: propIsOpen
           <div className="flex flex-col items-center gap-4 pt-2">
 
             {/* Logo */}
-            <div className="flex-shrink-0 bg-white rounded-lg p-3 border border-border">
+            <div className="flex-shrink-0 bg-black rounded-lg p-3 border border-border">
               <img
                 src={site.logo || "/placeholder.svg"}
                 alt={site.name}
