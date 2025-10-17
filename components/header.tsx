@@ -18,7 +18,7 @@ export function Header() {
 
           {/* Badges de Segurança */}
           <div className="flex items-center gap-3">
-            <Link href="https://www.srij.com/" className=" flex items-center justify-center">
+            <Link href="https://www.srij.turismodeportugal.pt" className=" flex items-center justify-center">
               <Image src="/srij.svg" alt="SRIJ logo" width={32} height={32} />
             </Link>
           </div>
