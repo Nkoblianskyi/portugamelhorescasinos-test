@@ -1,6 +1,7 @@
-import { Star, Shield, CreditCard, Headphones } from "lucide-react"
+import { Shield, CreditCard, Headphones } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { bettingSites } from "@/lib/mock-data"
+import { StarRating } from "@/components/star-rating"
 
 export function BonusSection() {
   const topCasinos = bettingSites.slice(0, 3)
@@ -28,16 +29,14 @@ export function BonusSection() {
             >
               {index === 0 && (
                 <div className="text-center mb-4">
-                  <div className="bg-primary text-white px-4 py-2 rounded-full font-bold text-sm inline-block">
-                    MELHOR BÓNUS
-                  </div>
+                  <div className="bg-primary text-white px-4 py-2 rounded-full font-bold text-sm">MELHOR BÓNUS</div>
                 </div>
               )}
 
               {index !== 0 && <div className="h-[52px]"></div>}
 
               <div className="text-center mb-6">
-                <div className="bg-white border-2 border-border rounded-lg p-4 inline-block mb-4 h-[116px] flex items-center justify-center">
+                <div className="bg-black border-2 border-border rounded-lg p-4 inline-block mb-4 h-[116px] flex items-center justify-center">
                   <img
                     src={casino.logo || "/placeholder.svg"}
                     alt={casino.name}
@@ -56,14 +55,9 @@ export function BonusSection() {
                 </p>
 
                 <div className="flex items-center justify-center mb-2">
-                  {[...Array(5)].map((_, i) => (
-                    <Star
-                      key={i}
-                      className={`w-4 h-4 ${i < casino.stars ? "text-primary fill-primary" : "text-muted fill-none"}`}
-                    />
-                  ))}
+                  <StarRating rating={casino.rating / 2} />
                 </div>
-                <div className="text-primary font-bold">{(casino.rating * 2).toFixed(1)}/10</div>
+                <div className="text-primary font-bold">{casino.rating.toFixed(1)}/10</div>
               </div>
 
               <Button
